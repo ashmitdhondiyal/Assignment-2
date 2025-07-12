@@ -35,6 +35,6 @@ box.onclick = function () {
     box.style.display = "none";
     var end = new Date().getTime();
     var timetook = (end - start) / 1000;
-    alert(timetook);
+    alert(timetook + " Seconds");
     move();
 }
