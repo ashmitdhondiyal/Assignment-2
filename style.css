@@ -8,14 +8,5 @@ body{
     height: 200px;
     width: 200px;
     background-color: red;
-    position: relative;
-}
-.container{
     position: absolute;
-    border: 2px solid black;
-    width: 90%;
-    height: 80vh;
-    display: flex;
-    margin-left: 50px;
-    overflow: hidden;
 }
