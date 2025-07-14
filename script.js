@@ -16,16 +16,20 @@ function move() {
     var left;
     var top;
     var wh;
-    left = Math.random() * 300;
-    top = Math.random() * 300;
-    wh = ((Math.random() * 400) + 100);
+    wh = ((Math.random() * 300) + 100);
+    var maxLeft = window.innerWidth - wh;
+    var maxTop = window.innerHeight - wh;
+    maxLeft = Math.max(0, maxLeft);
+    maxTop = Math.max(0, maxTop);
+    left = Math.random() * maxLeft;
+    top = Math.random() * maxTop;
     box.style.left = left + "px";
     box.style.top = top + "px";
     box.style.width = wh + "px";
     box.style.height = wh + "px";
     box.style.display = "block";
     box.style.backgroundColor = getRandomColor();
-    start = new Date().getTime();
+    start = new Date().getTime("seconds");
 
 }
 
@@ -35,6 +39,6 @@ box.onclick = function () {
     box.style.display = "none";
     var end = new Date().getTime();
     var timetook = (end - start) / 1000;
-    alert(timetook + " Seconds");
+    alert(timetook + " seconds");
     move();
 }
